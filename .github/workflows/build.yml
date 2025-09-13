@@ -65,15 +65,15 @@ on:
           - "true"
           - "false"
 
-jobs:
-  set-date:
-    runs-on: ubuntu-latest
-    outputs:
-      date: ${{ steps.getdate.outputs.date }}
-    steps:
-      - name: Get Current Date
-        id: getdate
-        run: echo "date=$(date +%Y%m%d)" >> $GITHUB_OUTPUT
+   jobs:
+     set-date:
+       runs-on: ubuntu-latest
+      outputs:
+         date: ${{ steps.getdate.outputs.date }}
+       steps:
+         - name: Get Current Date
+           id: getdate
+           run: echo "date=$(date +%Y%m%d)" >> $GITHUB_OUTPUT
 
     steps:
       - name: Checkout source
